@@ -6,7 +6,6 @@ import Image from "next/image";
 import { ArrowBigDownDash } from "lucide-react";
 import axios from "axios";
 import { useQuery, useQueryClient } from "react-query";
-import DataPage from "./DataPage";
 import Link from "next/link";
 
 const Main = () => {
@@ -33,9 +32,9 @@ const Main = () => {
       return response.data;
     },
     {
-      onMutate: () => {
-        setIsLoading(true);
-      },
+      // onMutate: () => {
+      //   setIsLoading(true);
+      // },
       onError: () => {
         setIsLoading(false); 
       },
@@ -92,7 +91,7 @@ const Main = () => {
         />
       ) : isError ? (
         <div className="p-4 bg-red-600 rounded text-white">
-          {error?.message}
+          Error
         </div>
       ) : data?.links ? (
         <section className="flex flex-col md:flex-row  bg-gray-50/50 md:px-24 p-4 my-4">
