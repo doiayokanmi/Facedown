@@ -32,17 +32,18 @@ const Main = () => {
       return response.data;
     },
     {
-      // onMutate: () => {
-      //   setIsLoading(true);
-      // },
-      // onError: () => {
-      //   setIsLoading(false); 
-      // },
-      // onSuccess: () => {
-      //   setIsLoading(false); 
-      // },
+      onMutate: () => {
+        setIsLoading(true);
+      },
+      onError: () => {
+        setIsLoading(false); 
+      },
+      onSuccess: () => {
+        setIsLoading(false); 
+      },
       enabled: false,
-      
+      staleTime: 60000,
+      cacheTime: 60000
     }
   );
 
@@ -97,7 +98,7 @@ const Main = () => {
           <img
             className="basis-1/2 object-fit"
             width={"500px"}
-            style={{maxHeight:'400px'}}
+            style={{maxHeight:'300px'}}
             src={data?.thumbnail || "/nothumbnail.jpg"}
             alt="video thumbnail"
           />
