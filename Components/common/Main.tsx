@@ -73,7 +73,7 @@ const Main = () => {
             onClick={handleDownload}
             className="h-full text-white absolute right-0 rounded-none p-4 border-0 "
           >
-            <ArrowBigDownDash /> Download
+            <ArrowBigDownDash /> Downloadn
           </Button>
         </div>
       </section>
