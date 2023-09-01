@@ -110,7 +110,7 @@ const Main = () => {
                   className="p-4 bg-black text-blue-600 mb-4 md:mb-0 text-center"
                   href={data?.links["Download Low Quality"]}
                 >
-                  Download in low quality
+                  Download in lomw quality
                 </Link>
 
                 <Link
