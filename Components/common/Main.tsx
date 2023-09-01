@@ -32,9 +32,6 @@ const Main = () => {
       return response.data;
     },
     {
-      onMutate: () => {
-        setIsLoading(true);
-      },
       onError: () => {
         setIsLoading(false); 
       },
